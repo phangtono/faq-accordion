@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [faq-accordion-solution](https://your-solution-url.com)
-- Live Site URL: [faq-accordion-live-site](https://your-live-site-url.com)
+- Solution URL: [faq-accordion-solution](https://github.com/phangtono/faq-accordion)
+- Live Site URL: [faq-accordion-live-site](https://poetic-croquembouche-e62d0a.netlify.app/)
 
 ## My process
 
