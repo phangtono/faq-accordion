@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap');
+
+:root{
+
+/* 
+    - Mobile: 375px
+    - Desktop: 1440px
+*/
+    --ff-work-sans: 'Work Sans', sans-serif;
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-light-pink: hsl(275, 100%, 97%);
+    --clr-grayish-purple: hsl(292, 16%, 49%);
+    --clr-dark-purple: hsl(292, 42%, 14%);
+
+    --fw--400: 400;
+    --fw--600: 600;
+    --fw--700: 700;
+
+    --fs--400: 1rem;
+    --fs--600: 1.1rem;
+    --fs--700: 4rem;
+
+}
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+
+html{
+    font-size: 16px;
+    font-family: var(--ff-work-sans);
+    line-height: 1.5;
+}
+
+body {
+    background-color: var(--clr-light-pink);
+    height: 100vh;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: minmax(1rem,auto) minmax(340px,540px) minmax(1rem,auto);
+    grid-template-rows: 15% 15% min-content auto;
+    height: 100%;
+}
+
+.image {
+    background-color: var(--clr-dark-purple);
+    background-image: url('assets/images/background-pattern-desktop.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 1 / -1;
+    grid-row: 1 / 3;
+}
+
+.faq{
+    --gap : 1.5rem;
+
+    background-color: var(--clr-white);
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+
+    border-radius: var(--gap);
+    padding: var(--gap);
+
+}
+
+.faq .title {
+    display: flex;
+    gap: var(--gap);
+    align-items: center;
+    justify-items: start;
+    font-weight: var(--fw--700);
+    font-size: var(--fs--700);
+}
+
+.faq .title img {
+    height: var(--fs--700);
+    width: var(--fs--700);
+}
+
+.faq li {
+    list-style: none;
+    margin-block: var(--gap);
+}
+
+.faq a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.faq a:focus,
+.faq a:hover{
+    outline: none;
+    color: purple;
+}
+
+.faq .question{
+    font-size: var(--fs--600);
+    font-weight: var(--fw--600);
+    display: flex;
+    justify-content: space-between;
+}
+
+.faq .image {
+    background-image: url('assets/images/icon-plus.svg');
+    background-color: var(--clr-white);
+    width: 2rem;
+    height: 2rem;
+}
+
+.faq p {
+    font-size: var(--fs--400);
+    font-weight: var(--fw--400);
+    padding-block: var(--gap);
+    display: none;
+}
+
+.faq .checked p {
+    display: block;
+}
+
+.faq .checked .image{
+    background-image: url('assets/images/icon-minus.svg');
+}
